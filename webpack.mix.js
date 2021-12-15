@@ -16,3 +16,7 @@ mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'pub
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
+mix.js('resources/js/code-mirror.js', 'public/js');
+
+mix.postCss('resources/css/custom-codemirror.css', 'public/css');
