@@ -1,4 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/code-mirror.js": "/js/code-mirror.js",
+    "/css/custom-editor.css": "/css/custom-editor.css",
     "/css/app.css": "/css/app.css"
 }
