@@ -17,4 +17,5 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     tabSize: 4,
     lineWrapping: true,
     autofocus: true,
+    viewportMargin: Infinity,
 });

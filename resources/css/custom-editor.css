@@ -1,0 +1,11 @@
+.CodeMirror{
+    height: auto !important;
+    min-height: 80vh !important;
+}
+
+.CodeMirror-scroll {
+    height: auto !important;
+    min-height: 80vh !important;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
