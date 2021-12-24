@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,7 @@ Route::get('/dashboard', function () {
 Route::get('/editor', function () {
     return view('editor');
 })->middleware(['auth'])->name('editor');
+
+Route::post('/editor', [EditorController::class, 'SaveText'])->name('editor.store');
 
 require __DIR__.'/auth.php';
