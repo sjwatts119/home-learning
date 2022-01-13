@@ -13,18 +13,28 @@
 
 
 <div class="bg-white overflow-hidden shadow-sm">
-    <form action="" method="post" action="{{ route('editor.store') }}">
+    <form id="editor" name="editor" onsubmit=(GetCodeMirrorValue()) method="post" action="{{ route('editor.store') }}">
         @csrf
-        <div class="form-group">
-            <label>Name</label>
-            <input type="text" class="form-control" name="name" id="name">
-        </div>
-        <textarea id="code"></textarea>
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" id="name">
+
+        <textarea id="code" form="editor"></textarea>
+        <input type="hidden" value="" id="editorValue" name="editorValue">
+
         <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
     </form>
 </div>
 
+<button onclick="Test(editor)">Function</button>
+
 <script src="{{ asset('/js/code-mirror.js') }}"></script>
+
+<script> 
+function GetCodeMirrorValue(editor){
+    var cmValue = document.querySelector('.CodeMirror').CodeMirror.getValue("\n")
+    document.getElementById('editorValue').value=cmValue;
+}
+</script>
 </x-app-layout>
 
 
